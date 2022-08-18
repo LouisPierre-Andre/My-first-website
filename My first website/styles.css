@@ -1,0 +1,668 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 2s; 
+}
+html {
+    display: flex;
+    justify-content: center;
+}
+
+
+body {
+    width: 100vw;
+    max-width: 1544px;     /* ///////////////////////////////////////////////////////*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////////////////////////////////////////////// */
+
+     /* THE HEADER STYLE */
+header {
+    display: flex;
+    justify-content: center;
+    border: 5px solid green;
+    /* position: fixed; */
+    /* top: 0; */
+    /* width: 100vw; */
+    max-width: 1444px;
+    /* height: 50px; */
+    background-color: transparent;
+    /* z-index: 999; */
+    background-color: red;
+
+}
+
+#section1 header .logo {
+    display: flex;
+    justify-content: space-between;
+    /* width: 100%; */
+    padding: 1% 6% 1% 130px;
+    background-color: green;
+    position: fixed;
+    inset: 0;
+    height: 50px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* header .nav1 li {
+    display: none;
+}
+
+header .nav1 li a:hover {
+    padding: 4px 20px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.438);
+}
+
+header ul li {
+    list-style-type: none;
+    margin: 0px 8%;
+} */
+
+
+header ul .fa-solid {
+    color: white;
+    font-size: 38px;
+    z-index: 9;
+    cursor: pointer;
+    display: none;
+    transition: .3s;
+
+}
+header ul li .fa-solid:hover {
+    color: rgb(0, 255, 0);
+}
+
+
+header .logo {
+    font-size: 25px;
+    cursor: pointer;
+    z-index: 9992;
+    color: white;
+}
+
+header .logo span {
+    font-weight: bold;
+    color: rgb(0, 255, 0);
+}
+
+
+
+.animation-bar {
+    position: fixed;
+    top: 1%;
+    right: 10%;
+    translate: 50% -50%;
+    width: 0px;
+    height: 0px;
+    background-color: rgba(0, 0, 0, 0.952);
+    border-radius: 10000px;
+    display: none;
+    z-index: 9;
+}
+
+
+
+
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+  /* the media querys for the header */
+
+    @media (max-width: 1000px ) {
+
+    header {
+        padding: 1% 6% 1% 5%;
+        transition: .3s;
+        /* position: relative; */
+        z-index: 9;
+
+    }
+
+    header ul .fa-solid{
+        display: block;
+        z-index: 9;
+        position: fixed;
+        top: 7px;
+        right: 7%;
+    }
+
+    header ul .fa-solid:hover {
+        color: rgb(0, 255, 0);
+    }
+
+    header.active .nav1 li {
+        display: block;
+    }
+
+    header.active .nav1 li a {
+        color: white;
+        text-decoration: none;
+        transition: .2s;
+    }
+
+    header.active .nav1 li a:hover {
+        color: rgb(0, 255, 0);
+    }
+   
+
+
+    header.active {
+        /* height: 100vh; */
+        padding: 1% 5% 1% 5%;
+        background-color: transparent;
+    }
+
+
+   .animation-bar {
+        display: block;
+        transition: .61s;
+        z-index: -1;
+        
+    }
+
+    .header.active .animation-bar{
+       width: 2550px;
+       height: 2550px;
+       transition: 1s;
+    }
+
+    header.active nav {
+        flex-direction: column;
+    }
+
+    header.active nav ul {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        display: block;
+        margin-top: 10%;    
+        z-index: 99999;     
+
+    } 
+
+
+     header.active ul li  {
+        margin: 4% 0px;
+        
+
+    }
+
+    header.active ul li a {
+        font-size: 1.5em;
+  
+    }
+
+    header.active ul li:nth-child(1) {
+        opacity: 0;
+        animation: apear 1s .4s ease  forwards;
+    }
+
+    header.active ul li:nth-child(2) {
+        opacity: 0;
+        animation: apear 1s .6s ease  forwards;
+    }
+
+    header.active ul li:nth-child(3) {
+        opacity: 0;
+        animation: apear 1s .8s ease  forwards;
+    }
+
+    header.active ul li:nth-child(4) {
+        opacity: 0;
+        animation: apear 1s 1s ease  forwards;
+    }
+
+    header.active ul li:nth-child(5) {
+        opacity: 0;
+        animation: apear 1s 1.2s ease  forwards;
+    }
+
+    @keyframes apear {
+        0%{opacity: 0;}
+        100%{opacity: 1;}
+    } 
+
+
+}
+
+
+
+
+
+
+
+/* /////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////////////////////////////////// */
+
+/* The welcome page section 1 */
+
+#section1 {
+    border: 10px solid blue;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    height: 750px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0.842)), url(image/background.jpg);
+}
+
+
+#section1 .user-info {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(10, 10, 10, 0.966);
+    width: 35%;
+    padding-top: 80px;
+}
+
+
+#section1 .big-img {
+    height: 50%;
+    border: 4px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: 1s;
+    margin-bottom: 15px;
+    
+}
+
+#section1 .big-img h1 {
+    color: white;
+    font-size: 35px;
+}
+
+#section1 .big-img p {
+    color: white;
+    font-size: 24px;
+}
+
+
+#section1 .big-img img {
+    height: 250px;
+    width: 250px;
+    border-radius: 400px;
+    object-fit: cover;   
+    transition: 1s;
+    background-color: rgb(37, 31, 31);
+    object-position: right -50px bottom 0px;
+    border: 2px solid rgb(0, 255, 0);
+}
+
+
+
+
+
+
+
+
+
+
+/* #section1 .user-info {
+    position: fixed;
+    top: 0px;
+    width: 25%;
+    min-width: 350px;
+
+} */
+
+
+
+
+#section1 .user-info nav ul {
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     text-align: center;
+     width: 100%;
+}
+
+
+#section1 .user-info nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(41, 41, 41);
+    width: 80%;
+    height: 40px;
+    margin: 10px 0px;
+    border-radius: 100px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+#section1 .user-info nav ul li:hover {
+    width: 83%;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.685);
+    background-color: rgb(26, 26, 26);
+}
+
+
+
+#section1 .user-info nav li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#section1 .description {
+    width: 65%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10%;
+   
+}
+
+
+#section1 .description p {
+    margin-bottom: 3%;
+    color: white;
+    width: 600px;
+    z-index: 9;
+}
+
+#section1 .description .salutation {
+    font-size: 40px;
+}
+
+#section1 .description .name {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+#section1 .description .job {
+    font-size: 35px;
+}
+
+#section1 .description .job span {
+    color: rgb(0, 255, 0);
+}
+
+#section1 .description .hire-me {
+    width: 200px;
+    height: 45px;
+    border-radius: 5px;
+    background-color: rgb(0, 255, 0);
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    z-index: 9;
+    align-items: flex-start;
+    transition: .12s;
+}
+#section1 .description .hire-me:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.514);
+    width: 206px;
+    height: 47px;
+}
+
+
+#section1 .description .hire {
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    width: 65%;
+}
+
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+@media (max-width: 1000px) {
+   #section1 {
+    flex-direction: column;
+    align-items: center;
+   }
+   
+
+    #section1  nav {
+        display: none;
+    }
+
+    #section1 .user-info {
+        background-color: transparent;
+    }
+
+    #section1 .big-img h1,
+    #section1 .big-img p {
+        display: none;
+    }
+
+    #section1 .description {
+        margin-left: 0;
+    }
+
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+@media (max-width: 700px) {
+
+    #section1 .description p {
+        width: 400px;
+        z-index: 9;
+    }
+    
+    #section1 .description .salutation {
+        font-size: 30px;
+    }
+    
+    #section1 .description .name {
+        font-size: 40px;
+        font-weight: bold;
+    }
+    
+    #section1 .description .job {
+        font-size: 25px;
+    }
+
+    #section1 .description .hire-me {
+        height: 30px;
+        font-size: 20px;
+        font-weight: bold;
+        width: 30%;
+    }
+}
+
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+@media (max-width: 501px) {
+    #section1 .big-img img {
+        width: 170px;
+        height: 170px;
+        object-position: right -20px bottom 0px;
+
+    }
+
+    #section1 .description p {
+        width: 300px;
+        z-index: 9;
+    }
+    
+    #section1 .description .salutation {
+        font-size: 20px;
+    }
+    
+    #section1 .description .name {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    
+    #section1 .description .job {
+        font-size: 15px;
+    }
+
+    #section1 .description .hire-me {
+        height: 20px;
+        font-size: 12px;
+        font-weight: bold;
+        width: 20%;
+    }
+
+    header ul .fa-solid {
+        font-size: 30px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
